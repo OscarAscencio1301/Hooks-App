@@ -10,7 +10,8 @@ export const todoReducer = (state: Todo[], action: TodosAction) => {
             return state.filter(todo => todo.id !== action.payload.id)
         case 'change':
             return state.map(todo => todo.id === action.payload.id ? action.payload : todo)
-
+        case 'test':
+            return state
         default:
             return state
     }
@@ -42,4 +43,8 @@ type TodosAction = {
 {
     type: 'change',
     payload: Todo
+}
+    |
+{
+    type: 'test',
 }

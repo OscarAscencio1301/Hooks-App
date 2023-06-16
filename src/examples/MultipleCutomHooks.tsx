@@ -14,8 +14,9 @@ const MultipleCutomHooks = () => {
 
     return (
         <>
-            <h1>Rick and Morty</h1>
+            <h1>Rick and Morty</h1> 
             <hr />
+            <h2>{counter}</h2>
             {
                 loading ? <Alert /> : <Blockquote name={data?.name} episode={data?.episode} />
             }

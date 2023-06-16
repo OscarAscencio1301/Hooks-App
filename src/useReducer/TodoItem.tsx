@@ -8,7 +8,11 @@ interface PropsTodo {
 
 const TodoItem = ({ todo, deleteT, checkDone }: PropsTodo) => {
     return (
-        <li style={{ textDecoration: `${todo.done ? 'line-through' : 'none'}` }} className="d-flex justify-content-between align-items-center list-group-item" onClick={() => checkDone({ id: todo.id, todo: todo.todo, done: !todo.done })}>
+        <li
+        aria-label="list"
+        style={{ textDecoration: `${todo.done ? 'line-through' : 'none'}`}}
+         className="d-flex justify-content-between align-items-center list-group-item"
+          onClick={() => checkDone({ id: todo.id, todo: todo.todo, done: !todo.done })}>
             <span>{todo.todo}</span>
             <button className="btn btn-danger" onClick={() => deleteT(todo.id)}>Borrar</button>
         </li>

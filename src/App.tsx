@@ -8,8 +8,11 @@
 // import MemoHook from "./memos/useMemo"
 // import CallbackHook from "./memos/CallbackHook"
 // import { Padre } from "./07-tarea-memo/Padre"
+// import TodoApp from "./useReducer/TodoApp"
+// import MainApp from "./useContext/MainApp"
+import MainApp from "./useContext/MainApp"
+import UserProvider from "./useContext/context/UserProvider"
 
-import TodoApp from "./useReducer/TodoApp"
 
 
 
@@ -26,7 +29,10 @@ const App = () => {
       {/* <MemoHook /> */}
       {/* <CallbackHook /> */}
       {/* <Padre /> */}
-      <TodoApp />
+      {/* <TodoApp /> */}
+      <UserProvider>
+        <MainApp />
+      </UserProvider>
     </div>
   )
 }
