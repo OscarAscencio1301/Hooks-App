@@ -10,6 +10,7 @@
 // import { Padre } from "./07-tarea-memo/Padre"
 // import TodoApp from "./useReducer/TodoApp"
 // import MainApp from "./useContext/MainApp"
+import { BrowserRouter } from "react-router-dom"
 import MainApp from "./useContext/MainApp"
 import UserProvider from "./useContext/context/UserProvider"
 
@@ -30,9 +31,11 @@ const App = () => {
       {/* <CallbackHook /> */}
       {/* <Padre /> */}
       {/* <TodoApp /> */}
-      <UserProvider>
-        <MainApp />
-      </UserProvider>
+      <BrowserRouter>
+        <UserProvider>
+          <MainApp />
+        </UserProvider>
+      </BrowserRouter>
     </div>
   )
 }

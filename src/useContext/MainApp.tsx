@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
 import LoginPage from "./LoginPage"
 import HomePage from "./HomePage"
 import AboutPage from "./AboutPage"
@@ -9,7 +9,7 @@ const MainApp = () => {
     return (
         <>
             <h1>MainApp</h1>
-            <BrowserRouter>
+            {/* <BrowserRouter> */}
                 <Navbar />
                 <hr />
                 <Routes>
@@ -18,7 +18,7 @@ const MainApp = () => {
                     <Route path="/login" element={<LoginPage />} />
                 </Routes>
 
-            </BrowserRouter>
+            {/* </BrowserRouter> */}
         </>
     )
 }
